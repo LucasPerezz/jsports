@@ -46,11 +46,11 @@ const Home = () => {
                 <p className='absolute bottom-8 ml-7 text-white font-bold text-xl lg:text-3xl'>Shorts</p>
             </div>
             <div className='w-4/4 h-48 sm:h-full max-w-3xl shadow relative mb-2 sm:mb-4'>
-                <img src={buzos} alt="" className='object-cover h-full brightness-50'/>
+                <img src={buzos} alt="" className='object-cover w-full h-full brightness-50'/>
                 <p className='absolute bottom-8 ml-7 text-white font-bold text-xl lg:text-3xl'>Buzos</p>
             </div>
             <div className='w-4/4 h-48 sm:h-full max-w-3xl shadow relative mb-2 sm:mb-4'>
-                <img src={camperas} alt="" className='object-cover h-full brightness-50'/>
+                <img src={camperas} alt="" className='object-cover w-full h-full brightness-50'/>
                 <p className='absolute bottom-8 ml-7 text-white font-bold text-xl lg:text-3xl'>Camperas</p>
             </div>
         </div>
