@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+@font-face {
+    font-family: "adidas", sans-serif;
+    src: url(../font/AdihausDIN.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Nothing You Could Do', cursive;
+    font-weight: bold;
+}
+
+
+html {
+    font-family: "adidas", sans-serif;
+}
