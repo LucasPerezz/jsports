@@ -18,6 +18,7 @@ const ItemDetailContainer = () => {
       querySnapshot.forEach((doc) => {
           listProducts.push({id: doc.id, ...doc.data()})
       })
+
       setDetail(listProducts.filter((item) => item.id === id))
   }
 
