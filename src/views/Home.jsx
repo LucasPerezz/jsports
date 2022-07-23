@@ -8,31 +8,34 @@ import camisetas from '../assets/camiseta-argentina.webp'
 import shorts from '../assets/short-argentina.webp'
 import buzos from '../assets/buzo-city.jpg'
 import camperas from '../assets/parka-river2.jpg'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className='w-full max-w-8xl min-h-screen max-h-max m-auto'>
+    <div className='w-full max-w-8xl max-h-max m-auto'>
         <div className='max-h-max min-w-full relative'>
             <div className='absolute flex flex-col top-1/4 left-20 lg:w-2/5 w-2/4 gap-3'>
               <h3 className='hidden sm:block text-white font-bold text-3xl sm:text-xl xl:text-4xl'>EL SENTIMIENTO DE UN PAIS</h3>
               <h3 className='text-white font-bold text-sm text-left sm:hidden'>EL SENTIMIENTO DE UN PAIS</h3>
               <p className='text-white font-bold text-xs text-left sm:hidden -mt-2'>Llegó la nueva camiseta de Argentina para Qatar 2022. Comprala ahora y empezá a vivir el Mundial.</p>
               <p className='hidden sm:block text-white font-light text-lg sm:text-sm xl:text-xl'>Llegó la nueva camiseta de Argentina para Qatar 2022. Comprala ahora y empezá a vivir el Mundial.</p>
+            <Link to={'/products'}>
               <p className='hidden sm:block text-white underline text-xs lg:text-xl lg:mt-3 cursor-pointer'>Comprar ya.</p>
+              </Link>
             </div>
             <img src={banner} alt="argentina" className='w-full sm:h-auto h-36 object-cover bg-no-repeat bg-center'/>
         </div>
-        <div className='sm:w-10/12 w-full min-h-max sm:h-64 my-8 mx-auto grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-4 place-items-center sm:my-24'>
-            <div className='w-2/4 sm:w-2/5 flex flex-col items-center justify-center'>
+        <div className='sm:w-10/12 w-full min-h-max sm:h-64 my-8 mx-auto grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-4 place-items-center sm:my-12'>
+            <div className='w-2/4 sm:w-1/4 flex flex-col items-center justify-center'>
                 <img src={adidas} alt="" className='w-full' />
             </div>
-            <div className='w-2/4 sm:w-2/5 flex flex-col items-center justify-center'>
+            <div className='w-2/4 sm:w-1/4 flex flex-col items-center justify-center'>
                 <img src={nike} alt="" className='w-full' />
             </div>
-            <div className='w-2/4 sm:w-2/5 flex flex-col items-center justify-center'>
+            <div className='w-2/4 sm:w-1/4 flex flex-col items-center justify-center'>
                 <img src={puma} alt="" className='w-full' />
             </div>
-            <div className='w-2/4 sm:w-2/5 flex flex-col items-center justify-center'>
+            <div className='w-2/4 sm:w-1/4 flex flex-col items-center justify-center'>
                 <img src={newBalance} alt="" className='w-full' />
             </div>
         </div>
