@@ -7,7 +7,8 @@ import {useParams} from 'react-router-dom'
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
-    const { clothing_type } = useParams()
+    const { clothing_type, brand } = useParams()
+
 
     
     useEffect(() => {
@@ -18,17 +19,26 @@ const ItemListContainer = () => {
                 querySnapshot.forEach((doc) => {
                     listProducts.push({id: doc.id, ...doc.data()})
                 })
-                if (clothing_type === undefined) {
-                    setProducts(listProducts)
-                } else {
+
+                if (brand === "all" && clothing_type !== "all") {
                     const filter = listProducts.filter((item) => item.clothing_type === clothing_type)
                     setProducts(filter)
+                } else if (clothing_type === "all" && brand !== "all") {
+                    const filterBrand = listProducts.filter((item) => item.brand === brand)
+                    setProducts(filterBrand)
+                    console.log(filterBrand)
+                } else {
+                    setProducts(listProducts)
                 }
+                
             }
             fetchData()
-        }, [clothing_type])
+        }, [clothing_type, brand])
 
         console.log(clothing_type)
+        console.log(brand)
+        console.log(products)
+        
   return (
     <div className='min-h-screen w-full'>
         <div className='w-full sm:w-4/5 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 place-items-center mt-12 lg:gap-10'>

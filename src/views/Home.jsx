@@ -26,36 +26,54 @@ const Home = () => {
             <img src={banner} alt="argentina" className='w-full sm:h-auto h-36 object-cover bg-no-repeat bg-center'/>
         </div>
         <div className='sm:w-10/12 w-full min-h-max sm:h-64 my-8 mx-auto grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-4 place-items-center sm:my-12'>
+            
             <div className='w-2/4 sm:w-1/4 flex flex-col items-center justify-center'>
+            <Link to={'/products/all/adidas'}>
                 <img src={adidas} alt="" className='w-full' />
+            </Link>
             </div>
+            
             <div className='w-2/4 sm:w-1/4 flex flex-col items-center justify-center'>
+            <Link to={'/products/all/nike'}>
                 <img src={nike} alt="" className='w-full' />
+            </Link>
             </div>
             <div className='w-2/4 sm:w-1/4 flex flex-col items-center justify-center'>
+            <Link to={'/products/all/puma'}>
                 <img src={puma} alt="" className='w-full' />
+            </Link>
             </div>
             <div className='w-2/4 sm:w-1/4 flex flex-col items-center justify-center'>
+            <Link to={'/products/all/new-balance'}>
                 <img src={newBalance} alt="" className='w-full' />
+            </Link>
             </div>
         </div>
         <div className='sm:w-10/12 sm:gap-4 grid grid-cols-2 sm:grid-cols-2 min-h-max mx-auto place-items-center mt-12'>
+            <Link to={'/products/camisetas/all'}>
             <div className='w-4/4 h-48 sm:h-full sm:min-w-3xl shadow relative mb-2 sm:mb-4'>
                 <img src={camisetas} alt="" className='object-cover w-full h-full brightness-50'/>
                 <p className='absolute bottom-8 ml-7 text-white font-bold text-xl lg:text-3xl'>Camisetas</p>
             </div>
+            </Link>
+            <Link to={'/products/shorts/all'}>
             <div className='w-4/4 h-48 sm:h-full max-w-3xl shadow relative mb-2 sm:mb-4'>
                 <img src={shorts} alt="" className='object-cover w-full h-full brightness-50'/>
                 <p className='absolute bottom-8 ml-7 text-white font-bold text-xl lg:text-3xl'>Shorts</p>
             </div>
+            </Link>
+            <Link to={'/products/buzos/all'}>
             <div className='w-4/4 h-48 sm:h-full max-w-3xl shadow relative mb-2 sm:mb-4'>
                 <img src={buzos} alt="" className='object-cover w-full h-full brightness-50'/>
                 <p className='absolute bottom-8 ml-7 text-white font-bold text-xl lg:text-3xl'>Buzos</p>
             </div>
+            </Link>
+            <Link to={'/products/camperas/all'}>
             <div className='w-4/4 h-48 sm:h-full max-w-3xl shadow relative mb-2 sm:mb-4'>
                 <img src={camperas} alt="" className='object-cover w-full h-full brightness-50'/>
                 <p className='absolute bottom-8 ml-7 text-white font-bold text-xl lg:text-3xl'>Camperas</p>
             </div>
+            </Link>
         </div>
 
     </div>

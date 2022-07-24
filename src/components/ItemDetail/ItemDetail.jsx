@@ -26,6 +26,13 @@ const ItemDetail = ({item}) => {
             <h3 className='italic font-medium text-sm'>{item.name.toUpperCase()}</h3>
             <p className='font-semibold'>$<span>{item.price * counter}</span></p>
             </div>
+        <div className='flex gap-3 justify-center mt-10 w-full mx-auto flex-wrap'>
+            {
+                item.clothing_size.map((size) => {
+                    return <button className='w-12 px-3 border-sky-300 border-2 text-sm rounded-lg'>{size}</button>
+                })
+            }
+        </div>
         <div className='flex gap-4 justify-center items-center mt-12'>
             <button className='border-gray-300 border-2 rounded-md px-3' onClick={subtractCounter}>-</button>
             <p>{counter}</p>

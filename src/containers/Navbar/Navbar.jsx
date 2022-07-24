@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Nav from "../../components/Nav/Nav";
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -24,7 +25,9 @@ const Navbar = () => {
           />
         </svg>
       </button>
+      <Link to={'/'}>
       <h1 className="text-2xl lg:text-3xl">J<span className="text-sky-400">sports</span></h1>
+      </Link>
       <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
