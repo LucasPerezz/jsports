@@ -4,6 +4,7 @@ import { CartContext } from '../../cartContext/UseCartContext'
 const ItemDetail = ({item}) => {
 
     const [counter, setCounter] = useState(1)
+    const [add, setAdd] = useState(false)
     const { addToCart } = useContext(CartContext)
 
 
@@ -19,6 +20,9 @@ const ItemDetail = ({item}) => {
         }
     }
 
+    const itemAdded = () => {
+        setAdd(!add)
+    }
 
 
 
@@ -37,8 +41,12 @@ const ItemDetail = ({item}) => {
             <p>{counter}</p>
             <button className='border-black border-2 rounded-sm px-3 bg-black text-white' onClick={() => addCounter()}>+</button>
         </div>
-        <div className='flex justify-center mt-8'>
-            <button className='bg-sky-400 border-2 rounded-md w-full text-sm hover:bg-sky-600 text-white py-2' onClick={() => addToCart(item, counter)}>COMPRAR</button>
+        <div className='flex justify-center mt-8 flex-col'>
+            { add && <h4 className='text-gray-500 text-center'>Item agregado!</h4>}
+            <button className='bg-sky-400 border-2 rounded-md w-full text-sm hover:bg-sky-600 text-white py-2' onClick={() => {
+                addToCart(item, counter)
+                itemAdded()
+            }}>COMPRAR</button>
         </div>
         </div>
     </div>
