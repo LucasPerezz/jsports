@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import Nav from "../../components/Nav/Nav";
+import Cart from "../Cart/Cart"
 import {Link} from 'react-router-dom'
 
 const Navbar = () => {
 
-    const [toggle, setToggle] = useState(false)
+    const [menuToggle, setMenuToggle] = useState(false)
+    const [cartToggle, setCartToggle] = useState(false)
 
   return (
     <>
     <div className="w-full shadow h-20 flex justify-around items-center relative">
-      <button className="p-3 shadow-sm flex flex-col justify-center items-center" onClick={() => setToggle(!toggle)}>
+      <button className="p-3 shadow-sm flex flex-col justify-center items-center" onClick={() => setMenuToggle(!menuToggle)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -28,7 +30,7 @@ const Navbar = () => {
       <Link to={'/'}>
       <h1 className="text-2xl lg:text-3xl">J<span className="text-sky-400">sports</span></h1>
       </Link>
-      <button>
+      <button className="p-3 shadow-sm flex flex-col justify-center items-center" onClick={() => setCartToggle(!cartToggle)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-7"
@@ -40,7 +42,10 @@ const Navbar = () => {
       </button>
     </div>
     {
-        toggle && <Nav />
+        menuToggle && <Nav />
+    }
+    {
+      cartToggle && <Cart />
     }
     </>
   );

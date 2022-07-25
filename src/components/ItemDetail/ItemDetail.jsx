@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, { useContext, useState } from 'react'
+import { CartContext } from '../../cartContext/UseCartContext'
 
 const ItemDetail = ({item}) => {
 
     const [counter, setCounter] = useState(1)
+    const { addToCart } = useContext(CartContext)
+
 
     const subtractCounter = () => {
         if (counter > 1 ) {
@@ -15,6 +18,9 @@ const ItemDetail = ({item}) => {
             setCounter(counter + 1)
         }
     }
+
+
+
 
   return (
     <div className='flex flex-col lg:grid sm:grid-cols-2 w-4/5 mx-auto mt-20'>
@@ -29,7 +35,7 @@ const ItemDetail = ({item}) => {
         <div className='flex gap-3 justify-center mt-10 w-full mx-auto flex-wrap'>
             {
                 item.clothing_size.map((size) => {
-                    return <button className='w-12 px-3 border-sky-300 border-2 text-sm rounded-lg'>{size}</button>
+                    return <button className='w-12 px-3 border-sky-300 border-2 text-sm rounded-lg' >{size}</button>
                 })
             }
         </div>
@@ -39,7 +45,7 @@ const ItemDetail = ({item}) => {
             <button className='border-gray-300 border-2 rounded-md px-3' onClick={addCounter}>+</button>
         </div>
         <div className='flex justify-center mt-8'>
-            <button className='border-sky-400 border-2 rounded-md w-full py-1 text-sm hover:border-sky-600'>Comprar</button>
+            <button className='border-sky-400 border-2 rounded-md w-full py-1 text-sm hover:border-sky-600' onClick={() => addToCart(item, counter)}>Comprar</button>
         </div>
         </div>
     </div>
