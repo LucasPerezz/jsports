@@ -41,7 +41,7 @@ const ItemListContainer = () => {
         
   return (
     <div className='min-h-screen w-full'>
-        <div className='w-full sm:w-4/5 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 place-items-center mt-12 lg:gap-10'>
+        <div className='w-full sm:w-4/5 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 place-items-center mt-12 gap-3 lg:gap-5'>
             {
                 products.map((product) => {
                     return <Item product={product} key={product.id} />

@@ -23,7 +23,7 @@ const Cart = () => {
               </li>
               <li className="font-light text-gray-500 text-xs sm:text-sm">{item.name}</li>
               <li className="font-light text-gray-500 text-xs sm:text-sm">{item.qty}</li>
-              <li className="font-light text-gray-500 text-xs sm:text-sm"><span>$</span>{item.total}</li>
+              <li className="font-light text-gray-500 text-xs sm:text-sm"><span>$</span>{item.price}</li>
               <li>
                 <span onClick={() => removeItem(item.id)}>
                   <svg

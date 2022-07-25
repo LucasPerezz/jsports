@@ -11,7 +11,7 @@ export const UseCartContext = ({ children }) => {
         cart.map((item) => {
           if (item.id === product.id) {
             item.qty += qty;
-            item.total += product.price * qty;
+            item.price += product.price * qty;
           }
 
           return item;
@@ -24,12 +24,13 @@ export const UseCartContext = ({ children }) => {
           id: product.id,
           name: product.name,
           image: product.image,
-          price: product.price,
           qty: qty,
-          total: product.price * qty,
+          price: product.price * qty,
         },
       ]);
     }
+
+    console.log(cart)
   };
 
   const isInTheCart = (productID) => {
